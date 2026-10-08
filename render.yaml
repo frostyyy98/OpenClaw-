@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: luna-openclaw
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: LUNA_API_KEY
+        sync: false
+
+      - key: ALLOWED_ORIGINS
+        sync: false
+
+      - key: AI_API_KEY
+        sync: false
+
+      - key: AI_BASE_URL
+        sync: false
+
+      - key: AI_MODEL
+        sync: false
